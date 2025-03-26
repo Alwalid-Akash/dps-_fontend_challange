@@ -32,10 +32,7 @@ const Read: React.FC = () => {
         </div>
       </div>
 
-      <div className='showdata'>
 
-        hii
-      </div>
     </>
 
   );

@@ -1,78 +1,34 @@
-.scearchcontainer {
-
-  display: flex;
-  margin: 20px 40px;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.name {
-  margin: 20px 20px;
-  justify-content: center;
-
-}
-
-.check {
-  margin: 20px 20px;
-}
-
-.option {
-  margin: 20px 20px;
-}
-
-.showdata {
-  margin: 20px 40px;
-  display: flex;
-  justify-content: center;
-  /* Center horizontally */
-  align-items: center;
-  /* Center vertically */
-
-}
-
-
-.user-list-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+.app {
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.user-list {
+.filter-container {
+  margin: 10px;
+}
+
+.user-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: center;
 }
 
 .user-card {
-  background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
-  width: 250px;
   padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-card.highlight {
+  border: 2px solid gold;
 }
 
 .user-image {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.user-details {
-  font-size: 14px;
-}
-
-.user-details h3 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.user-details p {
-  margin: 5px 0;
 }
