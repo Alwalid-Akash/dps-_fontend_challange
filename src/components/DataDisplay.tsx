@@ -25,7 +25,7 @@ interface DataDisplayProps {
   users: User[];
 }
 
-const DataDisplay: React.FC<DataDisplayProps> = ({ users }) => {
+const DataDisplay: React.FC<DataDisplayProps> = ({ users = [] }) => {
   return (
     <div className="user-cards">
       {users.map((user) => (

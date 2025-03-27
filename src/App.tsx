@@ -107,7 +107,16 @@ const App: React.FC = () => {
 
 				<CityFilter cities={cities} onChange={(value: string) => setCityFilter(value)} />
 
-
+				<div className="highlight-checkbox">
+					<label>
+						<input
+							type="checkbox"
+							checked={highlightOldest}
+							onChange={(e) => setHighlightOldest(e.target.checked)}
+						/>
+						Highlight oldest user in each city
+					</label>
+				</div>
 
 
 				{/* Display filtered users */}
