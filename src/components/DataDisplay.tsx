@@ -27,14 +27,14 @@ interface DataDisplayProps {
 
 const DataDisplay: React.FC<DataDisplayProps> = ({ users = [] }) => {
   return (
-    <div className="user-cards">
+    <div className="user-cards ">
       {users.map((user) => (
         <div
           key={user.id}
           className={`user-card ${user.highlight ? 'highlight' : ''}`}
         >
           <img src={user.image} alt={user.firstName} className="user-image" />
-          <div className="user-details">
+          <div className="user-details ">
             <h3>{user.firstName} {user.lastName}</h3>
             <p>Email: {user.email}</p>
             <p>City: {user.address.city}</p>

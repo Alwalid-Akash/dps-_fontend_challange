@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import NameFilter from './components/ NameFilter';
 import DataDisplay from './components/DataDisplay';
 import CityFilter from './components/CityFilter';
+import CheckboxFilter from './components/CheckboxFilter';
 import './App.css';
 
 
@@ -101,22 +102,19 @@ const App: React.FC = () => {
 
 			<div className="app">
 
-				<h1>User List</h1>
+				<h1>User Data</h1>
 				<NameFilter onChange={(value: string) => setNameFilter(value)} />
 
 
 				<CityFilter cities={cities} onChange={(value: string) => setCityFilter(value)} />
 
-				<div className="highlight-checkbox">
-					<label>
-						<input
-							type="checkbox"
-							checked={highlightOldest}
-							onChange={(e) => setHighlightOldest(e.target.checked)}
-						/>
-						Highlight oldest user in each city
-					</label>
-				</div>
+				<CheckboxFilter
+					label="Highlight oldest user in each city"
+					checked={highlightOldest}
+					onChange={setHighlightOldest}
+				/>
+
+
 
 
 				{/* Display filtered users */}

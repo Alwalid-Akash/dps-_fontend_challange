@@ -10,7 +10,7 @@ const NameFilter: React.FC<NameFilterProps> = ({ onChange }) => {
   };
 
   return (
-    <div className="filter-container">
+    <div className="filter-container ">
       <label htmlFor="nameFilter">Filter by Name: </label>
       <input
         id="nameFilter"
