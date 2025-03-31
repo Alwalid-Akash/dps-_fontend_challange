@@ -1,9 +1,11 @@
 .app {
   text-align: center;
   font-family: Arial, sans-serif;
-  width: 90%;
-  max-width: 1200px;
+  width: 85%;
   margin: 0 auto;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
 }
 
 .filter-container {
@@ -12,6 +14,7 @@
   justify-content: center;
   margin: 20px 20px;
   font-size: 1.2rem;
+
 
 }
 
