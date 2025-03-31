@@ -15,6 +15,7 @@ interface User {
 	id: number;
 	firstName: string;
 	lastName: string;
+	birthDate: string;
 	age: number;
 	email: string;
 	image: string;
@@ -53,19 +54,22 @@ const App: React.FC = () => {
 			});
 	}, []);
 
-	// Apply filters and highlight logic
 	useEffect(() => {
 		let result: User[] = users;
 
 
 		if (nameFilter) {
-			result = result.filter(
-				(user) =>
-					user.firstName.toLowerCase().includes(nameFilter.toLowerCase()) ||
-					user.lastName.toLowerCase().includes(nameFilter.toLowerCase())
-			);
-		}
+			const lowerCaseFilter = nameFilter.toLowerCase();
 
+			result = result.filter((user) => {
+				const fullName = `${user.firstName} ${user.lastName}`.toLowerCase();
+				return (
+					user.firstName.toLowerCase().includes(lowerCaseFilter) ||
+					user.lastName.toLowerCase().includes(lowerCaseFilter) ||
+					fullName.includes(lowerCaseFilter)
+				);
+			});
+		}
 
 		if (cityFilter) {
 			result = result.filter((user) => user.address.city === cityFilter);
@@ -109,15 +113,11 @@ const App: React.FC = () => {
 				<CityFilter cities={cities} onChange={(value: string) => setCityFilter(value)} />
 
 				<CheckboxFilter
-					label="Highlight oldest user in each city"
+					label=" Highlight oldest user in each city"
 					checked={highlightOldest}
 					onChange={setHighlightOldest}
 				/>
 
-
-
-
-				{/* Display filtered users */}
 				{filteredUsers.length === 0 ? (
 					<p>No users found</p>
 				) : (

@@ -4,6 +4,7 @@ interface User {
   id: number;
   firstName: string;
   lastName: string;
+  birthDate: string;
   age: number;
   email: string;
   image: string;
@@ -38,6 +39,7 @@ const DataDisplay: React.FC<DataDisplayProps> = ({ users = [] }) => {
             <h3>{user.firstName} {user.lastName}</h3>
             <p>Email: {user.email}</p>
             <p>City: {user.address.city}</p>
+            <p>DOB: {user.birthDate}</p>
             <p>Age: {user.age}</p>
           </div>
         </div>
